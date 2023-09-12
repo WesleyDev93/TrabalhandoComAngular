@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-title',
+  selector: 'app-titulo',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.css']
 })
@@ -9,14 +9,14 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 // criando interface do OnInit
 // a interface espera um metodo
 
-export class TitleComponent implements OnInit, OnChanges {
+export class TituloComponente implements OnInit, OnChanges {
 
   // Criando tratamento do metodo
 
     @Input () nome: string = '';
 
   constructor () {
-   // console.log ("Constructor");
+   console.log ("Constructor");
   }
 
 // interface de inicialização do OnChanges
@@ -24,7 +24,7 @@ export class TitleComponent implements OnInit, OnChanges {
 // ativo sempre que um valor muda e esta atrelado ao Input , pois deve ter um valor alterado
 
   ngOnChanges(): void {
-   // console.log ("ngOnChanges");
+   console.log ("ngOnChanges");
   }
 
 
@@ -35,7 +35,7 @@ export class TitleComponent implements OnInit, OnChanges {
 
 
   ngOnInit(): void {
-   // console.log ("OnInit");
+   console.log ("OnInit");
   }
 
 }
