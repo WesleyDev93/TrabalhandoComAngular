@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -9,23 +9,33 @@ import { Component, OnInit } from '@angular/core';
 // criando interface do OnInit
 // a interface espera um metodo
 
-export class TitleComponent implements OnInit {
+export class TitleComponent implements OnInit, OnChanges {
 
   // Criando tratamento do metodo
 
-  nome: string = 'Wesley Oliveira';
+    @Input () nome: string = '';
 
-  constructor () {}
+  constructor () {
+   // console.log ("Constructor");
+  }
+
+// interface de inicialização do OnChanges
+// ele vem antes do Oninit sempre
+// ativo sempre que um valor muda e esta atrelado ao Input , pois deve ter um valor alterado
+
+  ngOnChanges(): void {
+   // console.log ("ngOnChanges");
+  }
 
 
 
-  // interface de inicialização da classe
+  // interface de inicialização do Oninit
   // com isso podemos ao inicalizar o componente determinar uma ação logo de inicio
   // conforme a minha necessidade
 
 
   ngOnInit(): void {
-    this.nome = ` ola  ${this.nome}`
+   // console.log ("OnInit");
   }
 
 }
