@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { TituloComponente  } from './title/title.component';
 import { CheckSampleComponent } from './check-sample/check-sample.component';
 
+// Importando o modulo
 
+import { ListaModule } from './lista/lista.module';
 
 
 
@@ -24,7 +26,8 @@ import { CheckSampleComponent } from './check-sample/check-sample.component';
   // podemos importar os modulos aqui
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ListaModule,
   ],
 
   // vamos adicionar o exports ele serve para exportar nossos modulos
