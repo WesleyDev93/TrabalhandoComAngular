@@ -1,4 +1,5 @@
 
 <app-titulo nome="Wesley"></app-titulo>
 <app-titulo nome="Miyashiro"></app-titulo>
-<app-check-sample></app-check-sample>
+<app-check-sample *ngIf="isAlive"></app-check-sample>
+<button (click)="dispose()">Destruir</button>
